@@ -145,8 +145,9 @@ public class WordChecker {
             HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
             urlConnection.setRequestProperty("Accept","application/json");
             //TODO: replace with your own app id and app key
-            urlConnection.setRequestProperty("app_id",app_id);
-            urlConnection.setRequestProperty("app_key",app_key);
+            // get your app_id and app_key here -> https://developer.oxforddictionaries.com/
+            urlConnection.setRequestProperty("app_id", app_id);
+            urlConnection.setRequestProperty("app_key", app_key);
 
             // read the output from the server
             BufferedReader reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
